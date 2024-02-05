@@ -1,8 +1,9 @@
 'use strict'
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 var app = require('./app');
 var port = process.env.PORT || 3977;
+
 
 mongoose.connect('mongodb://localhost:27017/cm2').then(
     res => console.log(`La base de datos se ha conectado exitosamente`),
