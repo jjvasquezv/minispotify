@@ -117,7 +117,7 @@ function uploadImage(req, res){
                 if(!userUpdated){
                     res.status(404).send({message: 'El atributo de imágen del usuario no ha podido ser actualizado'});
                 } else {
-                    res.status(200).send({user: userUpdated});
+                    res.status(200).send({image: file_name, user: userUpdated});
                 }
             }).catch((error) => {
                 res.status(500).send({message: 'El sistema no ha podido actualizar el atributo de imágen del usuario'});
